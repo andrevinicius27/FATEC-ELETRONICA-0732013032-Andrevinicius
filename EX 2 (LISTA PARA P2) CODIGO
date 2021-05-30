@@ -1,0 +1,27 @@
+// EXERCICIO 2:
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(void) {
+  int x=1, y=0, z=0, s_produto;
+  x=1;
+  y=0;
+  z=0;
+  
+  for (int aux=100; aux<=999; aux++){
+    s_produto=x*y*z;
+    printf("%i\n",s_produto);
+    z++;
+    if(z==10){
+      z=0;
+      y++;
+    }
+
+    if(y==10){
+      y=0;
+      x++;
+    }
+  }
+  return 0;
+}
