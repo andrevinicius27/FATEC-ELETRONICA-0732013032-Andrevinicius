@@ -1,0 +1,95 @@
+
+
+//PROGRAMA EM C:
+
+/*#include <stdio.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main(void) {
+  int e_nro_1, e_nro_2, mmc = 1;
+  int resto1,resto2;
+  int valor_aux =2;
+  //Usuario entra com os numeros:
+  printf("Digite o primeiro numero inteiro:\n");
+  scanf("%d",& e_nro_1);
+
+  printf("Digite o segundo numero inteiro:\n");
+  scanf("%d",& e_nro_2);
+
+  while( e_nro_1>1 & e_nro_2>1){
+  
+      while(resto1>0 & resto2>0){
+        resto1=(e_nro_1 / valor_aux);
+        resto2=(e_nro_2 / valor_aux);
+
+       if(resto1>0 || resto2>0){
+       valor_aux++;
+       
+        if(resto1==0){
+          e_nro_1--;
+        }
+        if(resto2==0){
+          e_nro_2--;
+        }
+        
+       }
+        else{printf("mmc %d",mmc);
+        }
+          
+          
+           }  
+  }     
+  mmc=mmc*valor_aux; 
+  printf("mmc %d",mmc);
+  scanf("%d",& mmc);
+
+   return 0;
+}*/
+//Professor, tentei executar o fluxograma com while e if como indicado na ultima aula antes da p2 e obtive o resultado acima.Infelizmente não chegar ao valor desejado do mmc.
+//Abaixo encontrei um outro metodo de calcular o mmc, para a questão não ficar sem resolução correta.
+
+
+
+#include <stdio.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main(void) {
+  int e_nro_1, e_nro_2;
+  int mmc;
+  int resto; 
+  int a;
+  int b;
+  //Usuario entra com os numeros:
+  printf("Digite o primeiro numero inteiro:\n");
+  scanf("%d",& e_nro_1);
+  
+  
+  printf("Digite o segundo numero inteiro:\n");
+  scanf("%d",& e_nro_2);
+
+    a = e_nro_1;
+    b = e_nro_2;
+
+    while (resto != 0) {
+        resto = a % b;
+
+        a = b;
+        b = resto;
+
+    } 
+    mmc=( e_nro_1 * e_nro_2) / a;
+    printf("mmc: %d\n",mmc);
+    return 0;
+}
+
+  
+      
+  
+
+  
+
+  
+ 
+
