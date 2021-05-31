@@ -1,0 +1,65 @@
+//Programa para monitorar a ventoinha (90º ON / 70º OFF)
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <unistd.h>
+
+
+
+int main(void) {
+//int x;
+//x=1;
+//while (x==1) {
+  int e_temp_ambiente;
+//Usuario insere a variavel TEMPERATURA:
+  printf("Entre com o valor da temperatura ambiente:\n");
+  scanf("%d",&e_temp_ambiente); 
+  //Condição de PERIGO:  
+    if(e_temp_ambiente>90){
+    printf("Sistema em emergencia:PERIGO");
+    return 0;
+  }
+
+  
+//Simulando funcionamento do motor(Aquecendo):  
+ int contador1;
+ if(e_temp_ambiente <= 90) {
+ sleep(1);
+ for(contador1 = e_temp_ambiente; contador1 < 91; contador1++){
+ printf("Temperatura atual: %d \n", contador1);
+  }
+ 
+}
+sleep(1);
+
+int contador2;
+if (contador1 > 89){
+printf("Temperatura em 90 graus. Ventoinha ligada \n");
+sleep(1);
+//Motor resfriando:
+  for(contador2 = contador1; contador2 >70; contador2--){
+printf("Temperatura atual: %d \n", contador2);
+
+
+  }
+  printf("Temperatura em  %d graus. Ventoinha desligada", contador2);
+  contador2=0;
+
+}
+
+
+
+ return 0;
+}
+//printf("Deseja simular novamente?\n Digite 1 para SIM");
+// scanf("%d",&x);
+//}
+
+   
+ 
+
+
+  
+  
+  
+
