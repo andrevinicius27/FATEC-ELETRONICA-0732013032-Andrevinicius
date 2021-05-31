@@ -1,0 +1,26 @@
+//- Pisca- pisca de 0,5Hz:
+
+// L= LOW == OFF
+// H= HIGH == ON
+
+#include <stdio.h>
+#include <unistd.h>
+
+int main(void) {
+  char s_lampada;
+
+  s_lampada = 'L';
+
+  while(1){
+    if(s_lampada == 'L')
+  {
+    s_lampada= 'H';
+
+  }else{
+    s_lampada = 'L';
+  }
+ printf("Lampada %c.\n", s_lampada);
+ sleep(2);
+  }
+  return 0;
+}
