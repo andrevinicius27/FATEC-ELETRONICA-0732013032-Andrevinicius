@@ -1,0 +1,44 @@
+#include <stdio.h>
+   #include <stdlib.h>
+
+ 
+    void ordena();    //declara a função, que vai estar depois da main  
+  
+    int vet[6];
+ 
+    int main(){          
+ 
+    int a;
+ 
+        for (a=0; a<5; a++){     //Usuario digita os numeros para ordenar:
+            printf("Digite os numeros para ordenar: ");
+            scanf("%d", &vet[a]);
+        }
+ 
+        ordena(); //chama a função para ordenar
+ 
+        for (a=0; a<5; a++){     //Mostra o numero ordenado
+            printf("Numeros ordenados: %d \n", vet[a]);
+        }
+ 
+        printf("\n");
+        system("pause");
+ 
+    }  //fim main
+ 
+ 
+    void ordena(){          //Aqui é a função ordena os vetores
+ 
+        int a, b, aux;
+ 
+            for( a=0; a<5; a++ ){
+                 for( b=a+1; b<5; b++ ){
+                      if( vet[a] < vet[b] ){
+                          aux = vet[a];
+                          vet[a] = vet[b];
+                          vet[b] = aux;
+                      }
+                 }
+            }
+            printf("\n Ordenado com sucesso!\n\n");
+    }
